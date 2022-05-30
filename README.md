@@ -1,2 +1,3 @@
 # data-in-map
- Page developed to display child slave labor data in map and graphs. 
+
+Page developed to display data on child slave labor in Brazil in maps and graphs.
