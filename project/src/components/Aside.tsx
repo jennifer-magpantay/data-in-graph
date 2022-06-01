@@ -9,12 +9,15 @@ export const Aside = () => {
       <div className="aside--header">
         <img src={Logo} alt="Logpipsum" />
       </div>
-      {/* menu list */}
-      <ul className="aside--list">
-        {listItems.map((item) => (
-          <li className="aside--list-item">{item}</li>
-        ))}
-      </ul>
+
+      <div className="aside--body">
+        {/* menu list */}
+        <ul className="aside--list">
+          {listItems.map((item) => (
+            <li className="aside--list-item">{item}</li>
+          ))}
+        </ul>
+      </div>
     </aside>
   );
 };

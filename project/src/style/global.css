@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  a {
+    @apply px-1 font-semibold no-underline transition-all
+    visited:text-violet-700
+    hover:underline 
+    focus:underline focus:outline-1;
+  }
   h1 {
     @apply text-gray-800 text-2xl font-bold;
   }
@@ -16,49 +22,76 @@
   }
 
   p {
-    @apply text-black text-base font-normal;
+    @apply mt-4 text-black text-base font-normal first:mt-0;
+  }
+
+  .card {
+    @apply h-[calc(33.33%-1.25rem)] mb-5 px-4 py-2 bg-white rounded-sm 
+    last:mb-0;
+  }
+
+  .caption {
+    @apply mt-4 text-gray-700 text-sm font-normal;
+  }
+
+  .container-flex {
+    @apply flex p-5;
   }
 }
 
 @layer components {
   /* aside */
   .aside {
-    @apply w-1/4 h-screen flex-initial  pl-20 pr-5 bg-white border-r-2;
+    @apply w-1/6 h-full flex flex-col 
+    /* fixed top-0 left-0  */
+    pl-20 pr-5 bg-white border-r-2 overflow-hidden;
   }
 
   .aside--header {
     @apply h-20 flex items-center bg-white;
   }
 
-  .aside--list {
-    @apply my-10;
+  .aside--body {
+    @apply flex-grow overflow-hidden;
   }
 
+  /* .aside--list {
+    @apply my-10;
+  } */
+
   .aside--list-item {
-    @apply p-2 text-gray-600 text-base font-semibold rounded-sm 
-    hover:bg-gray-100 hover:text-black active:bg-gray-200;
+    @apply p-2 text-gray-600 text-base font-semibold rounded-sm transition-all
+    hover:bg-gray-100 hover:text-black
+    focus:outline-none focus:bg-gray-100 focus:text-black active:bg-gray-200;
   }
 
   /* main */
   .main {
-    @apply w-3/4 h-screen flex-initial  bg-gray-50;
+    @apply w-5/6 h-full flex flex-col
+    bg-gray-50 overflow-hidden;
   }
 
   .main--header {
-    @apply h-20 flex items-center pl-5 bg-white border-b-2;
+    @apply h-20 flex items-center 
+    /* fixed top-0 right-0  */
+    pl-5 bg-white border-b-2;
   }
 
-  .main--content {
-    @apply pr-20;
+  .main--body {
+    @apply flex flex-col h-full overflow-y-auto;
+  }
+
+  .graph--container {
+    @apply my-5 p-5 bg-white rounded-sm;
   }
 
   /* footer */
   .footer {
-    @apply w-full h-16 flex items-center justify-center bg-gray-800 font-thin text-sm text-white;
+    @apply w-full h-14 flex items-center justify-center p-5 bg-gray-800 font-thin text-sm text-white;
   }
 
   /* screen: dashboard */
   .dashboard {
-    @apply w-full min-h-screen flex items-center justify-center;
+    @apply w-full h-screen flex items-center justify-center overflow-hidden;
   }
 }
