@@ -11,7 +11,13 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { inspectionsData } from "../data/inspections";
-import { childrenFoundData } from "../data/childrenFound";
+import { childrenAndTeenagersFoundData } from "../data/childrenAndTeenagersFound";
+
+// types
+import {
+  InspectionsDataType,
+  ChildrenAndTeenagersFoundDataType,
+} from "../types/types";
 
 ChartJS.register(
   CategoryScale,
@@ -23,42 +29,40 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "top" as const,
-    },
-    title: {
-      display: true,
-      text: "Chart.js Line Chart",
-    },
-  },
-};
+interface Props {
+  text: string;
+  labels: string[];
+  label: string;
+  dataset: string[];
+  color: string;
+}
 
-const labels = inspectionsData.map((label) => label.ano);
-const data1 = inspectionsData.map((data) => data.quantidade);
-console.log(data1);
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Inspecations",
-      data: inspectionsData.map((data) => data.quantidade),
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgb(255, 99, 132)",
+export function LineGraph({ text, labels, label, dataset, color }: Props) {
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top" as const,
+      },
+      title: {
+        display: true,
+        text: text,
+      },
     },
-    {
-      label: "Children and Teenagers found",
-      data: childrenFoundData.map((data) => data.quantidade),
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgb(53, 162, 235)",
-    },
-  ],
-};
+  };
 
-export function LineGraph() {
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: label,
+        data: dataset,
+        borderColor: color,
+        backgroundColor: color,
+      },
+    ],
+  };
+
   return (
     <div className="graph--container">
       <Line options={options} data={data} />

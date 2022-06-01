@@ -1,9 +1,3 @@
-type dataFiscalizacoes = {
-  id: number;
-  ano: string;
-  quantidade: string;
-};
-
 export let inspectionsData = [
   {
     ano: "2017",
