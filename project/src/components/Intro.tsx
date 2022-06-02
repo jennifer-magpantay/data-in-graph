@@ -25,10 +25,7 @@ export const Intro = () => {
           work performed by adolescents aged 16 and 17 in activities or
           conditions prohibited by law.
         </li>
-      </ul>
-      <p className="caption">
-        The data presented in the counters below are from 01/2017 to 04/2022
-      </p>
+      </ul>     
     </div>
   );
 };

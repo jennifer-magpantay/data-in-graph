@@ -10,14 +10,6 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { inspectionsData } from "../data/inspections";
-import { childrenAndTeenagersFoundData } from "../data/childrenAndTeenagersFound";
-
-// types
-import {
-  InspectionsDataType,
-  ChildrenAndTeenagersFoundDataType,
-} from "../types/types";
 
 ChartJS.register(
   CategoryScale,
@@ -30,18 +22,27 @@ ChartJS.register(
 );
 
 interface Props {
-  text: string;
+  text?: string;
+  displayLabel: boolean;
   labels: string[];
-  label: string;
+  label?: string;
   dataset: string[];
   color: string;
 }
 
-export function LineGraph({ text, labels, label, dataset, color }: Props) {
+export function LineGraph({
+  text,
+  displayLabel,
+  labels,
+  label,
+  dataset,
+  color,
+}: Props) {
   const options = {
     responsive: true,
     plugins: {
       legend: {
+        display: displayLabel,
         position: "top" as const,
       },
       title: {
@@ -63,9 +64,5 @@ export function LineGraph({ text, labels, label, dataset, color }: Props) {
     ],
   };
 
-  return (
-    <div className="graph--container">
-      <Line options={options} data={data} />
-    </div>
-  );
+  return <Line options={options} data={data} />;
 }

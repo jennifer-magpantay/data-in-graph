@@ -9,6 +9,7 @@
     hover:underline 
     focus:underline focus:outline-1;
   }
+
   h1 {
     @apply text-gray-800 text-2xl font-bold;
   }
@@ -22,29 +23,45 @@
   }
 
   p {
-    @apply mt-4 text-black text-base font-normal first:mt-0;
+    @apply mt-4 text-black text-base font-normal    
+    first:mt-0;
+  }
+
+  button {
+    @apply mb-5 py-2 px-4 bg-blue-600 rounded-sm text-white
+    hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:ring focus:ring-blue-400;
   }
 
   .card {
-    @apply h-[calc(33.33%-1.25rem)] mb-5 px-4 py-2 bg-white rounded-sm 
-    last:mb-0;
+    @apply w-full p-5 bg-white border-2 rounded-sm;
+  }
+
+  .card--title {
+    @apply font-semibold;
+  }
+
+  .card--content {
+    @apply p-2 bg-gray-100 text-right;
   }
 
   .caption {
-    @apply mt-4 text-gray-700 text-sm font-normal;
+    @apply max-w-none mt-4 text-gray-700 text-sm font-normal italic;
   }
 
   .container-flex {
-    @apply flex p-5;
+    @apply flex py-5 pl-5 pr-20;
+  }
+
+  .row--container {
+    @apply w-full flex items-center justify-center;
   }
 }
 
 @layer components {
   /* aside */
   .aside {
-    @apply w-1/6 h-full flex flex-col 
-    /* fixed top-0 left-0  */
-    pl-20 pr-5 bg-white border-r-2 overflow-hidden;
+    @apply w-1/5 h-full flex flex-col pl-20 pr-5 bg-white border-r-2 
+    overflow-hidden;
   }
 
   .aside--header {
@@ -60,14 +77,15 @@
   } */
 
   .aside--list-item {
-    @apply p-2 text-gray-600 text-base font-semibold rounded-sm transition-all
+    @apply p-2 text-gray-600 text-base font-semibold rounded-sm 
+    transition-all
     hover:bg-gray-100 hover:text-black
     focus:outline-none focus:bg-gray-100 focus:text-black active:bg-gray-200;
   }
 
   /* main */
   .main {
-    @apply w-5/6 h-full flex flex-col
+    @apply w-4/5 h-full flex flex-col
     bg-gray-50 overflow-hidden;
   }
 
@@ -78,11 +96,19 @@
   }
 
   .main--body {
-    @apply flex flex-col h-full overflow-y-auto;
+    @apply h-full flex flex-col overflow-y-auto;
+  }
+
+  .intro {
+    @apply p-5 mr-20;
   }
 
   .graph--container {
-    @apply my-5 p-5 bg-white rounded-sm;
+    @apply p-5 bg-white border-2 rounded-sm;
+  }
+
+  .graph--title {
+    @apply text-center;
   }
 
   /* footer */
