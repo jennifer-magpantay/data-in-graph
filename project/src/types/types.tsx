@@ -9,3 +9,4 @@ export type ChildrenAndTeenagersFoundDataType = {
   ano: string;
   quantidade: string;
 };
+

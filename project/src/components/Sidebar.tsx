@@ -1,13 +1,12 @@
-import { Route, Routes, Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // assets
 import Logo from "../assets/logo.svg";
 
-// data
+// routes
 import { routes } from "../routes/routes";
 
 export const Sidebar = () => {
- 
   return (
     <div className="sidebar">
       {/* logo */}

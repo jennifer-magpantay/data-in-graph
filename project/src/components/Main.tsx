@@ -1,6 +1,4 @@
-import React from "react";
-
-import { Footer } from "../components/Footer";
+import { Footer } from "./Footer";
 import { Intro } from "./Intro";
 
 interface Props {
@@ -19,7 +17,9 @@ export const Main = ({ children }: Props) => {
 
       <div className="main--body">
         <Intro />
-        <div className="container-flex">{children}</div>
+        <div className="main--content">
+          {children}          
+        </div>
         <Footer />
       </div>
     </main>
