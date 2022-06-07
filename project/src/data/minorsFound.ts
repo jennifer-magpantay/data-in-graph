@@ -1,6 +1,6 @@
 
 
-export const childrenAndTeenagersFoundData = [
+export const minorsFoundData = [
   {
     ano: "2017",
     quantidade: "1564",

@@ -1,4 +1,4 @@
-export let inspectionsData = [
+export const inspectionsData = [
   {
     ano: "2017",
     quantidade: "921",

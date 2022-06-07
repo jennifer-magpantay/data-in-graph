@@ -114,6 +114,10 @@
     @apply h-full flex flex-col overflow-y-auto;
   }
 
+  .main--content {
+    @apply w-full;
+  }
+
   .intro {
     @apply py-5 pl-10 mr-20;
   }
