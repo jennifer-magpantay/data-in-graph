@@ -1,4 +1,4 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, NavLink } from "react-router-dom";
 
 // assets
 import Logo from "../assets/logo.svg";
@@ -6,11 +6,8 @@ import Logo from "../assets/logo.svg";
 // data
 import { routes } from "../routes/routes";
 
-interface Props {
-  onClick: () => void;
-}
-
 export const Sidebar = () => {
+ 
   return (
     <div className="sidebar">
       {/* logo */}
@@ -22,9 +19,22 @@ export const Sidebar = () => {
         {/* menu list */}
         <nav>
           <ul className="sidebar--list">
-            <Routes>
-             {/* map routes */}
-            </Routes>
+            {routes.map((item) => (
+              <li key={item.id}>
+                {/* to use isActive properly, add the styles to the NavLink component */}
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    isActive ? "navlink--active" : "navlink"
+                  }
+                  style={({ isActive }) => ({
+                    color: isActive ? "#ffffff" : undefined,
+                  })}
+                >
+                  {item.title}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
