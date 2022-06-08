@@ -1,19 +1,19 @@
-export type InspectionsDataType = {
+export type InspectionsCompletedDataType = {
   id: number;
-  ano: string;
-  quantidade: string;
+  Ano: string;
+  Quantidade_fiscalizações: string;
 };
 
-export type ChildrenAndTeenagersFoundDataType = {
+export type MinorsFoundDataType = {
   id: number;
-  ano: string;
-  quantidade: string;
+  Ano: string;
+  Quantidade: string;
 };
 
 export type MinorsFoundByAgeAndGenderDataType = {
-  Idade: number;
+  Idade: string;
   Sexo: "F" | "M";
-  Quantidade: number;
+  Quantidade: string;
 };
 
 export type StatsByAgeDataType = {

@@ -7,7 +7,7 @@ export const minorsFoundByAgeAndGender = [
   {
     Idade: "1",
     Sexo: "F",
-    Quantidade: "9",
+    Quantidade: "10",
   },
   {
     Idade: "2",
@@ -17,12 +17,12 @@ export const minorsFoundByAgeAndGender = [
   {
     Idade: "2",
     Sexo: "M",
-    Quantidade: "9",
+    Quantidade: "11",
   },
   {
     Idade: "3",
     Sexo: "F",
-    Quantidade: "5",
+    Quantidade: "7",
   },
   {
     Idade: "3",
@@ -32,7 +32,7 @@ export const minorsFoundByAgeAndGender = [
   {
     Idade: "4",
     Sexo: "F",
-    Quantidade: "12",
+    Quantidade: "14",
   },
   {
     Idade: "4",
@@ -42,131 +42,131 @@ export const minorsFoundByAgeAndGender = [
   {
     Idade: "5",
     Sexo: "F",
-    Quantidade: "7",
+    Quantidade: "9",
   },
   {
     Idade: "5",
     Sexo: "M",
-    Quantidade: "21",
+    Quantidade: "23",
   },
   {
     Idade: "6",
     Sexo: "M",
-    Quantidade: "20",
+    Quantidade: "26",
   },
   {
     Idade: "6",
-    Sexo: "F",
-    Quantidade: "22",
-  },
-  {
-    Idade: "7",
-    Sexo: "M",
-    Quantidade: "17",
-  },
-  {
-    Idade: "7",
-    Sexo: "F",
-    Quantidade: "21",
-  },
-  {
-    Idade: "8",
-    Sexo: "M",
-    Quantidade: "20",
-  },
-  {
-    Idade: "8",
-    Sexo: "F",
-    Quantidade: "29",
-  },
-  {
-    Idade: "9",
-    Sexo: "M",
-    Quantidade: "32",
-  },
-  {
-    Idade: "9",
-    Sexo: "F",
-    Quantidade: "41",
-  },
-  {
-    Idade: "10",
     Sexo: "F",
     Quantidade: "27",
   },
   {
+    Idade: "7",
+    Sexo: "F",
+    Quantidade: "24",
+  },
+  {
+    Idade: "7",
+    Sexo: "M",
+    Quantidade: "24",
+  },
+  {
+    Idade: "8",
+    Sexo: "M",
+    Quantidade: "38",
+  },
+  {
+    Idade: "8",
+    Sexo: "F",
+    Quantidade: "39",
+  },
+  {
+    Idade: "9",
+    Sexo: "F",
+    Quantidade: "47",
+  },
+  {
+    Idade: "9",
+    Sexo: "M",
+    Quantidade: "64",
+  },
+  {
+    Idade: "10",
+    Sexo: "F",
+    Quantidade: "45",
+  },
+  {
     Idade: "10",
     Sexo: "M",
-    Quantidade: "68",
+    Quantidade: "146",
   },
   {
     Idade: "11",
     Sexo: "F",
-    Quantidade: "42",
+    Quantidade: "64",
   },
   {
     Idade: "11",
     Sexo: "M",
-    Quantidade: "101",
+    Quantidade: "211",
   },
   {
     Idade: "12",
     Sexo: "F",
-    Quantidade: "54",
+    Quantidade: "79",
   },
   {
     Idade: "12",
     Sexo: "M",
-    Quantidade: "148",
+    Quantidade: "367",
   },
   {
     Idade: "13",
     Sexo: "F",
-    Quantidade: "74",
+    Quantidade: "95",
   },
   {
     Idade: "13",
     Sexo: "M",
-    Quantidade: "273",
+    Quantidade: "542",
   },
   {
     Idade: "14",
     Sexo: "F",
-    Quantidade: "158",
+    Quantidade: "175",
   },
   {
     Idade: "14",
     Sexo: "M",
-    Quantidade: "610",
+    Quantidade: "883",
   },
   {
     Idade: "15",
     Sexo: "F",
-    Quantidade: "317",
+    Quantidade: "338",
   },
   {
     Idade: "15",
     Sexo: "M",
-    Quantidade: "1266",
+    Quantidade: "1501",
   },
   {
     Idade: "16",
     Sexo: "F",
-    Quantidade: "340",
+    Quantidade: "365",
   },
   {
     Idade: "16",
     Sexo: "M",
-    Quantidade: "1222",
+    Quantidade: "1364",
   },
   {
     Idade: "17",
     Sexo: "F",
-    Quantidade: "515",
+    Quantidade: "543",
   },
   {
     Idade: "17",
     Sexo: "M",
-    Quantidade: "1849",
+    Quantidade: "1950",
   },
 ];

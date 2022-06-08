@@ -1,26 +1,26 @@
 export const minorsFoundData = [
   {
-    ano: "2017",
-    quantidade: "1564",
+    Ano: "2017",
+    Quantidade: "2081",
   },
   {
-    ano: "2018",
-    quantidade: "1394",
+    Ano: "2018",
+    Quantidade: "1861",
   },
   {
-    ano: "2019",
-    quantidade: "1389",
+    Ano: "2019",
+    Quantidade: "1682",
   },
   {
-    ano: "2020",
-    quantidade: "573",
+    Ano: "2020",
+    Quantidade: "743",
   },
   {
-    ano: "2021",
-    quantidade: "1680",
+    Ano: "2021",
+    Quantidade: "1849",
   },
   {
-    ano: "2022",
-    quantidade: "643",
+    Ano: "2022",
+    Quantidade: "730",
   },
 ];
