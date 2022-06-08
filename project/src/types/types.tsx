@@ -10,3 +10,14 @@ export type ChildrenAndTeenagersFoundDataType = {
   quantidade: string;
 };
 
+export type MinorsFoundByAgeAndGenderDataType = {
+  idade: number;
+  sexo: "F" | "M";
+  quantidade: number;
+};
+
+export type StatsByAgeDataType = {
+  id: number;
+  idade: string;
+  quantidade: string;
+};
