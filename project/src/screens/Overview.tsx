@@ -6,13 +6,13 @@ import { LineGraph } from "../components/LineGraph";
 
 // types
 import {
-  InspectionsDataType,
-  ChildrenAndTeenagersFoundDataType,
+  InspectionsCompletedDataType,
+  MinorsFoundDataType,
 } from "../types/types";
 
 // data
 import { minorsFoundData } from "../data/minorsFound";
-import { inspectionsData } from "../data/inspections";
+import { inspectionsCompleted } from "../data/inspectionsCompleted";
 
 // helpers
 import { addId } from "../helpers/addId";
@@ -20,10 +20,10 @@ import { reduceData } from "../helpers/reduceData";
 import { formatNumber } from "../helpers/formatNumber";
 
 export function Overview() {
-  const [inspections, setInspections] = useState<InspectionsDataType[]>([]);
-  const [minorsFound, setMinorsFound] = useState<
-    ChildrenAndTeenagersFoundDataType[]
+  const [inspections, setInspections] = useState<
+    InspectionsCompletedDataType[]
   >([]);
+  const [minorsFound, setMinorsFound] = useState<MinorsFoundDataType[]>([]);
   const [isDataInspectionDisplayed, setIsDataInspectionDisplayed] = useState<
     boolean | undefined
   >();
@@ -33,13 +33,16 @@ export function Overview() {
     const childAndTeenagersData = addId(minorsFoundData);
     setMinorsFound(childAndTeenagersData);
 
-    const inspectionsDt = addId(inspectionsData);
+    const inspectionsDt = addId(inspectionsCompleted);
+    console.log(inspectionsDt);
     setInspections(inspectionsDt);
 
     setIsDataInspectionDisplayed(true);
 
     // return () => {}
   }, []);
+
+  console.log(inspections);
 
   // handle events
   function handleButtonClick(e: SyntheticEvent<HTMLButtonElement>) {
@@ -67,13 +70,13 @@ export function Overview() {
             displayLabel={false}
             labels={
               isDataInspectionDisplayed
-                ? inspections.map((item) => item.ano)
-                : minorsFound.map((item) => item.ano)
+                ? inspections.map((item) => item.Ano)
+                : minorsFound.map((item) => item.Ano)
             }
             dataset={
               isDataInspectionDisplayed
-                ? inspections.map((item) => item.quantidade)
-                : minorsFound.map((item) => item.quantidade)
+                ? inspections.map((item) => item.Quantidade_fiscalizações)
+                : minorsFound.map((item) => item.Quantidade)
             }
             color={isDataInspectionDisplayed ? "#1e3799" : "#079992"}
           />
@@ -89,20 +92,15 @@ export function Overview() {
         </button>
 
         <Card
-          title={
-            isDataInspectionDisplayed
-              ? "Total of inspections completed in the period *"
-              : "Total of minors found during inspections *"
-          }
-          content={
-            isDataInspectionDisplayed
-              ? formatNumber(reduceData(inspections, "quantidade"))
-              : formatNumber(reduceData(minorsFound, "quantidade"))
-          }
+          title="Total of inspections completed in the period *"
+          content={formatNumber(
+            reduceData(inspections, "Quantidade_fiscalizações")
+          )}
         />
-        <p className="caption">
-          * The data presented in the graphs are from 01/2017 to 04/2022
-        </p>
+        <Card
+          title="Total of minors found during inspections *"
+          content={formatNumber(reduceData(minorsFound, "Quantidade"))}
+        />
       </ColumnContainer>
     </div>
   );

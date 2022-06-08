@@ -10,18 +10,16 @@ import { reduceData } from "../helpers/reduceData";
 import { MinorsFoundByAgeAndGenderDataType } from "../types/types";
 
 export function StatsByGender() {
-  const [dataByGender, setDataByGender] = useState([]);
   const [genderFem, setGenderFem] = useState<
+    MinorsFoundByAgeAndGenderDataType[]
+  >([]);
+  const [genderMasc, setGenderMasc] = useState<
     MinorsFoundByAgeAndGenderDataType[]
   >([]);
 
   const [isDataByAgeDisplayed, setIsDataByAgeDisplayed] = useState<
     boolean | undefined
   >();
-
-  const [genderMasc, setGenderMasc] = useState<
-    MinorsFoundByAgeAndGenderDataType[]
-  >([]);
 
   useEffect(() => {
     const fem = filterData(minorsFoundByAgeAndGender, "Sexo", "F");
@@ -86,12 +84,17 @@ export function StatsByGender() {
         <button className="w-full" onClick={(e) => handleButtonClick(e)}>
           Total by Gender
         </button>
+
         <Card
-          title="Total of girls found*"
+          title="Total of minors found*"
+          content={formatNumber(reduceData(minorsFoundByAgeAndGender, "Quantidade"))}
+        />
+        <Card
+          title="Total of girls *"
           content={formatNumber(reduceData(genderFem, "Quantidade"))}
         />
         <Card
-          title="Total of boys found*"
+          title="Total of boys *"
           content={formatNumber(reduceData(genderMasc, "Quantidade"))}
         />
       </ColumnContainer>
