@@ -8,6 +8,9 @@ export const GraphContainer = ({ children, legend }: Props) => {
     <div className="graph--container">
       {children}
       <p className="caption">{legend}</p>
+      <p className="caption">
+        Data for 2022 is partial and updated until 04/2022
+      </p>
     </div>
   );
 };

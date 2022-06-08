@@ -1,5 +1,3 @@
-
-
 export const minorsFoundData = [
   {
     ano: "2017",

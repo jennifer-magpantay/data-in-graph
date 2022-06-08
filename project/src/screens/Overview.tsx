@@ -17,6 +17,7 @@ import { inspectionsData } from "../data/inspections";
 // helpers
 import { addId } from "../helpers/addId";
 import { reduceData } from "../helpers/reduceData";
+import { formatNumber } from "../helpers/formatNumber";
 
 export function Overview() {
   const [inspections, setInspections] = useState<InspectionsDataType[]>([]);
@@ -59,8 +60,8 @@ export function Overview() {
         >
           <h3 className="graph--title">
             {isDataInspectionDisplayed
-              ? "Inspections completed"
-              : "Minors found during inspections"}
+              ? "Inspections completed *"
+              : "Minors found during inspections *"}
           </h3>
           <LineGraph
             displayLabel={false}
@@ -95,8 +96,8 @@ export function Overview() {
           }
           content={
             isDataInspectionDisplayed
-              ? reduceData(inspections, "quantidade")
-              : reduceData(minorsFound, "quantidade")
+              ? formatNumber(reduceData(inspections, "quantidade"))
+              : formatNumber(reduceData(minorsFound, "quantidade"))
           }
         />
         <p className="caption">

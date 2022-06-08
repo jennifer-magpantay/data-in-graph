@@ -17,9 +17,7 @@ export const Main = ({ children }: Props) => {
 
       <div className="main--body">
         <Intro />
-        <div className="main--content">
-          {children}          
-        </div>
+        <div className="main--content">{children}</div>
         <Footer />
       </div>
     </main>

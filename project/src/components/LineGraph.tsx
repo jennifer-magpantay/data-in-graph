@@ -21,8 +21,8 @@ ChartJS.register(
 );
 
 interface Props {
-  text?: string;
   displayLabel: boolean;
+  text?: string;
   labels: string[];
   label?: string;
   dataset: string[];
@@ -30,8 +30,8 @@ interface Props {
 }
 
 export function LineGraph({
-  text,
   displayLabel,
+  text,
   labels,
   label,
   dataset,

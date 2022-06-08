@@ -11,9 +11,9 @@ export type ChildrenAndTeenagersFoundDataType = {
 };
 
 export type MinorsFoundByAgeAndGenderDataType = {
-  idade: number;
-  sexo: "F" | "M";
-  quantidade: number;
+  Idade: number;
+  Sexo: "F" | "M";
+  Quantidade: number;
 };
 
 export type StatsByAgeDataType = {
