@@ -8,6 +8,7 @@ The data was splitted into categories, each one with a complementar graph to hel
 
 ## Preview
 
+![data-in-maps](https://user-images.githubusercontent.com/56962997/172803834-cccd07b6-7922-4d16-8b07-3f6c900019eb.gif)
 
 ## Features
 
