@@ -16,6 +16,12 @@ export type MinorsFoundByAgeAndGenderDataType = {
   Quantidade: string;
 };
 
+export type MinorsFoundByActivityDataType = {
+  id: number;
+  Divisão_CNAE: string;
+  Quantidade: string;
+};
+
 export type StatsByAgeDataType = {
   id: number;
   idade: string;

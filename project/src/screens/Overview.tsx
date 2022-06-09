@@ -1,4 +1,5 @@
 import { useState, useEffect, SyntheticEvent } from "react";
+
 import { ColumnContainer } from "../components/ColumnContainer";
 import { Card } from "../components/Card";
 import { GraphContainer } from "../components/GraphContainer";
@@ -78,7 +79,7 @@ export function Overview() {
                 ? inspections.map((item) => item.Quantidade_fiscalizações)
                 : minorsFound.map((item) => item.Quantidade)
             }
-            color={isDataInspectionDisplayed ? "#1e3799" : "#079992"}
+            color="#0369a1"
           />
         </GraphContainer>
       </ColumnContainer>

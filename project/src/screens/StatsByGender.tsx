@@ -1,12 +1,19 @@
-import React, { useState, useEffect, SyntheticEvent } from "react";
+import { useState, useEffect, SyntheticEvent } from "react";
+
 import { Card } from "../components/Card";
 import { ColumnContainer } from "../components/ColumnContainer";
 import { DoubleBarGraph } from "../components/DoubleBarGraph";
 import { GraphContainer } from "../components/GraphContainer";
+
+// data
 import { minorsFoundByAgeAndGender } from "../data/minorsFoundByAgeAndGender";
+
+// helpers
 import { filterData } from "../helpers/filterData";
 import { formatNumber } from "../helpers/formatNumber";
 import { reduceData } from "../helpers/reduceData";
+
+// types
 import { MinorsFoundByAgeAndGenderDataType } from "../types/types";
 
 export function StatsByGender() {
@@ -16,7 +23,6 @@ export function StatsByGender() {
   const [genderMasc, setGenderMasc] = useState<
     MinorsFoundByAgeAndGenderDataType[]
   >([]);
-
   const [isDataByAgeDisplayed, setIsDataByAgeDisplayed] = useState<
     boolean | undefined
   >();
@@ -65,14 +71,14 @@ export function StatsByGender() {
                 ? genderFem.map((item) => item.Quantidade)
                 : [reduceData(genderFem, "Quantidade")]
             }
-            colorA="#7e22ce"
+            colorA="#be123c"
             labelB="Boys"
             datasetB={
               isDataByAgeDisplayed
                 ? genderMasc.map((item) => item.Quantidade)
                 : [reduceData(genderMasc, "Quantidade")]
             }
-            colorB="#075985"
+            colorB="#0369a1"
           />
         </GraphContainer>
       </ColumnContainer>
@@ -85,10 +91,12 @@ export function StatsByGender() {
           Total by Gender
         </button>
 
-        <Card
+        {/* <Card
           title="Total of minors found*"
-          content={formatNumber(reduceData(minorsFoundByAgeAndGender, "Quantidade"))}
-        />
+          content={formatNumber(
+            reduceData(minorsFoundByAgeAndGender, "Quantidade")
+          )}
+        /> */}
         <Card
           title="Total of girls *"
           content={formatNumber(reduceData(genderFem, "Quantidade"))}

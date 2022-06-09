@@ -1,9 +1,6 @@
 export const Intro = () => {
   return (
     <div className="intro">
-      {/* <h2>
-              Statistics and Information Dashboard of Labor Inspection in Brazil
-            </h2> */}
       <p>
         This section of the Statistical Information Panel of the Labor
         Inspection in Brazil
@@ -23,7 +20,7 @@ export const Intro = () => {
           work performed by adolescents aged 16 and 17 in activities or
           conditions prohibited by law.
         </li>
-      </ul>     
+      </ul>
     </div>
   );
 };

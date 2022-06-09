@@ -22,7 +22,7 @@ interface Props {
   indexAxis?: "x" | "y";
   displayLabel: boolean;
   text?: string;
-  labels: string[] | number[];
+  labels: string[];
   label?: string;
   dataset: string[] | number[];
   color: string;
@@ -41,11 +41,8 @@ export function BarGraph({
     indexAxis: indexAxis,
     scales: {
       y: {
-        grid: {
-          tickLength: 5,
-        },
         ticks: {
-          callback: function (value: string, index: number, ticks: {}): string {
+          callback: function (value: string, index: number, ticks: {}): any {
             const label = this.getLabelForValue(value);
             if (label.length >= 50) {
               const labelSliced: string = label.slice(0, 50);

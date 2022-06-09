@@ -72,7 +72,7 @@ export function StatsByAge() {
           displayLabel={false}
           labels={groupByAge.map((item) => item.idade)}
           dataset={groupByAge.map((item) => item.quantidade)}
-          color="#075985"
+          color="#0369a1"
         />
       </GraphContainer>
     </div>
