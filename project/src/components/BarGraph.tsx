@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -20,8 +19,9 @@ ChartJS.register(
 );
 
 interface Props {
-  text?: string;
+  indexAxis?: "x" | "y";
   displayLabel: boolean;
+  text?: string;
   labels: string[] | number[];
   label?: string;
   dataset: string[] | number[];
@@ -29,14 +29,33 @@ interface Props {
 }
 
 export function BarGraph({
-  text,
+  indexAxis,
   displayLabel,
+  text,
   labels,
   label,
   dataset,
   color,
 }: Props) {
   const options = {
+    indexAxis: indexAxis,
+    scales: {
+      y: {
+        grid: {
+          tickLength: 5,
+        },
+        ticks: {
+          callback: function (value: string, index: number, ticks: {}): string {
+            const label = this.getLabelForValue(value);
+            if (label.length >= 50) {
+              const labelSliced: string = label.slice(0, 50);
+              return `${labelSliced} ...`;
+            }
+            return label;
+          },
+        },
+      },
+    },
     responsive: true,
     plugins: {
       legend: {
